@@ -1,0 +1,37 @@
+$fast: 0.1s
+$medium-in: 0.25s
+$medium-out: 0.2s
+$slow-in: 0.35s
+$slow-out: 0.3s  
+  
+=keyframes($name)
+  @-webkit-keyframes #{$name}
+    @content
+  @-moz-keyframes #{$name}
+    @content
+  @-ms-keyframes #{$name}
+    @content
+  @keyframes #{$name}
+    @content
+
+=animation($str)
+  -webkit-animation: #{$str}
+  -moz-animation: #{$str}
+  -ms-animation: #{$str}
+  -o-animation: #{$str}
+  animation: #{$str}
+
+// Using
+// @keyframes smoothAppearance
+//   0%
+//     opacity: 0
+//     filter: blur(5px)
+//   100%
+//     opacity: 1
+//     filter: blur(0px)
+//
+//  .icon.animated
+//    +animtaion(smoothAppearance 0.1s infinity)
+//
+
+
